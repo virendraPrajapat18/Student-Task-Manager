@@ -1,117 +1,114 @@
 # 📚 Student Task Manager
 
-A simple full-stack **Student Task Manager** web application that allows users to add, view, update, and delete daily tasks.  
-The project is built as a **Single Page Application (SPA)** and demonstrates basic **CRUD operations**, REST APIs, and clean UI/UX.
+## 1. Project Title & Goal
+
+The Student Task Manager is a simple full-stack web application that allows users to add, view, update, and delete daily tasks using a single-page interface.
 
 ---
 
-## 🚀 Live Demo
+## 2. Setup Instructions
 
-- **Frontend (Vercel):** (https://student-task-manager-steel.vercel.app/)
-- **Backend (Render):** (https://student-task-manager-3wq2.onrender.com)
+Follow the steps below to run the project locally.
 
-
-
----
-
-## 🎯 Features
-
-- ➕ Add new tasks  
-- 📋 View all tasks without page refresh  
-- ✏️ Update tasks using inline editing  
-- 🗑 Delete tasks with confirmation  
-- 🌐 Single Page Application (SPA) behavior  
-- 🎨 Modern, clean, responsive UI  
-- 💾 Persistent storage using a JSON file  
-
----
-
-## 🛠️ Tech Stack
-
-### Frontend
-- HTML5  
-- CSS3 (Glassmorphism-inspired UI)  
-- Vanilla JavaScript  
-- Deployed on **Vercel**
-
-### Backend
-- Node.js  
-- Express.js  
-- REST API  
-- JSON file for storage  
-- Deployed on **Render**
-
----
-
-## 📂 Project Structure
-Student-Task-Manager/
-│
-├── frontend/
-│ ├── index.html
-│ ├── styles.css
-│ └── script.js
-│
-├── backend/
-│ ├── server.js
-│ ├── tasks.json
-│ └── package.json
-│
-└── README.md
-
-## 🔗 API Endpoints
-
-### Get All Tasks
-GET /tasks
-
-### Add a Task
-POST /tasks  
-Body:
-{
-  "task": "Complete assignment"
-}
-
-### Update a Task
-PUT /tasks/:id  
-Body:
-{
-  "task": "Updated task text"
-}
-
-### Delete a Task
-DELETE /tasks/:id
-
-
-## ▶️ Run Locally
-
-### Clone the repository
-git clone https://github.com/virendraPrajapat18/Student-Task-Manager.git
-cd Student-Task-Manager
-
-### Run Backend
+### Backend Setup
+bash
 cd backend
 npm install
 node server.js
 
-Backend runs on:
+The backend server will start on:
+
 http://localhost:5000
 
-### Run Frontend
-Open frontend/index.html using Live Server in VS Code
+Frontend Setup
+
+Open the frontend folder
+
+Run index.html using Live Server in VS Code
+OR
+
+Open index.html directly in a browser
+
+--- 
+
+
+## 3. The Logic (How I Thought)
+Why did I choose this approach?
+
+I chose a simple REST API with a JSON file for storage because the goal of the task was to demonstrate core full-stack concepts rather than complex database design.
+Using Node.js + Express made it easy to handle CRUD operations, while vanilla JavaScript on the frontend ensured a lightweight and fast Single Page Application without unnecessary frameworks.
+
+The UI was designed using pure CSS with a glassmorphism-inspired theme to keep it modern while still being easy to understand and implement.
+
+Hardest Bug I Faced & How I Fixed It
+
+The hardest issue I faced was handling inline task editing and delete confirmation without page refresh.
+Initially, updating tasks using browser prompts worked functionally but resulted in poor user experience.
+
+To fix this:
+
+I replaced the task text dynamically with an input field for inline editing
+
+Used state re-rendering by refetching tasks after every update/delete
+
+Added a confirmation step before deletion using UI icons instead of browser alerts
+
+This approach improved both usability and code clarity.
+
+I replaced the task text dynamically with an input field for inline editing
+
+Used state re-rendering by refetching tasks after every update/delete
+
+---
+
+## 4. Output Screenshots
+
+Below are screenshots proving that the application works as required.
+
+Application with Multiple Tasks
+
+Add, Edit, and Delete Functionality
+<img width="1916" height="865" alt="image" src="https://github.com/user-attachments/assets/81b8546c-7108-49a7-8bdd-2d1206957551" />
+
+---
+
+## 5. Future Improvements
+
+If I had 2 more days, I would add:
+
+Task completion status (mark task as done)
+
+User authentication (login/register)
+
+Database integration (MongoDB or SQLite)
+
+Drag-and-drop task reordering
+
+Dark/Light theme toggle
+
+Better error handling and loading states
+
+----
 
 
 
-## 🌍 Deployment Notes
 
-- Frontend is deployed on Vercel
-- Backend is deployed on Render
-- Frontend communicates with backend using REST APIs
-- Render free tier may take a few seconds to wake up on first request
+🌍 Live Deployment
+
+Frontend (Vercel): https://student-task-manager-steel.vercel.app
+
+Backend (Render): https://student-task-manager-3wq2.onrender.com
 
 
-## 👤 Author
+---
 
-**Virendra Prajapat**  
-Engineering Student | Full Stack Developer  
+
+👤 Author
+
+Virendra Prajapat
+Engineering Student | Full-Stack Developer
 GitHub: https://github.com/virendraPrajapat18
 
+Added a confirmation step before deletion using UI icons instead of browser alerts
 
+This approach improved both usability and code clarity.
