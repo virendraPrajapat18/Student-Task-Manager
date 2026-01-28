@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/tasks";
+const API_URL = "https://student-task-manager-3wq2.onrender.com/tasks";
 
 const taskInput = document.getElementById("taskInput");
 const addBtn = document.getElementById("addBtn");
